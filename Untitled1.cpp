@@ -1,30 +1,22 @@
-#include<iostream>
-#include<conio.h>
-
-using namespace std;
-
-//declarar funcion
-void suma(int d1,int d2);
-
+#include <iostream>
+#include <conio.h>
+using namespace  std;
 int main()
 {
-    //llamado de la funcion 
-    suma(5,6);
-     suma(2,2);
-      suma(20,48);
-      
-      
-      getch();
-      return 0;
-      }//fin main
-      
-      //definir la funcion 
-      void suma(int d1,int d2)
-      {
-           int rs=0;
-           //operacion
-           rs=d1+d2;
-           cout<<"la suma de"<<dl<<"+"<<d2<<"="<<rs<<endl;
-           }//fin funcion suma 
-      
-    
+   //crear una matriz
+   int d1[3][3]	;
+   
+   //asignar valores directamente 
+   d1[0][0]=5;
+   d1[2][2]=-15;
+   
+   //mostrar los datos
+   cout<<d1[0][0]<<endl;
+   cout<<d1[2][2]<<endl;
+   
+ 
+ 
+    getch();
+    return 0;
+  	
+}

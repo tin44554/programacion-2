@@ -1,63 +1,42 @@
-/*
-pedir al usuario ingresar 5 numeros en la funcion vacia muestre los datos en una funcion parametrisada
-calcule el promedio y devuelva el promedio, funcion retorno
-se debe usar array
-*/
-
-
-#include<iostream>
-#include<conio.h>
-
-using  namespace std;
-//declarar variables globales 
-const int TAM=5;
-int numeros[TAM];
-
-//defnir funciones
-//capturar datos 
-void capturar();
-void mostrar(int num[],int tam);
-float calcular_promedio(int num[],int tam);
-
+#include <iostream>
+#include <conio.h>
+using namespace  std;
 int main()
 {
-	//llamar funciones 
-	capturar();
-    mostrar(numeros,TAM);	
-   float pro=calcular_promedio(numeros,TAM); 
-   cout<<"promedio es "<<pro<<endl;
+	//crear mitriz 3,3
+	int v1[2][2];
 	
-	getch();
-	return 0;
-}//fin main
-//definir funcion
-void capturar()
-{
-	cout<<"ingrese"<<TAM<<"numeros enteros"<<endl;
-	for(int i=0;i<TAM;i++)
-	{
-		cout<<"["<<(i+1)<<"ingrese el numero.......";
-		cin>>numeros[i];
+	//captura de datos
+	for(int i=0;i<2;i++)
+	   {
+	  	 	for(int j=0;j<2;j++)
+	  	
+	  		{
+			  	cout<<"ingrese un valor numerico....:"	;
+			  	cin>>v1[i][j];
+			  	/*
+			  	cout<<"ingrese un valor numerico....:"	;
+			  	cin>dato;
+			  	cin>>v1[i][j];
+			  	*/		  		
+			}
+	  }
+	//mostrar la informaion
+	for(int i=0;i<2;i++)
+	{  
 		
-	}//fin for
+		for(int j=0;j<2;j++)
+	  	
+	  		{
+			  		cout<<"valor ingresado:  "<<v1[i][j]<<endl;
+		   }
+	  
+	} 
+		
 	
-};//fin de la funcion 
-/*------------------------------------------------------------*/
-void mostrar(int num[],int tam)
-{
-	cout<<"\t\tREPORTE DE DATOS\n";
-	for(int i=0;i<tam;i++)
-	{
-		cout<<num[i]<<" ";
-	}
-}
-/*----------------------------------------------------------------*/
-float calcular_promedio(int num[],int tam)
-{
-	int suma=0;
-	for(int i=0;i<tam;i++)
-	{
-		suma+=num[i];
-	}
-	return static_cast<float>(suma)/tam;
+	
+	
+    getch();
+    return 0;
+  	
 }
