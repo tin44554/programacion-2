@@ -1,88 +1,61 @@
-#include <iostream>
-#include <conio.h>
-using namespace  std;
-int main()
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+//estructura curso
+struct curso
 {
-    //matriz 3*3
-	string raya	[3][3];
-	int f,c;
+  int cod_cur;
+  char nom_cur[15];	
+};
+
+//estructura estudiante
+struct estudiante
+{
+	int cod_est;
+	char nom_est[20];
+	int edad;
+	struct curso cursito;		
+}alumno[2];
 	
-	raya[0][0]="1";
-	raya[0][1]="2";
-	raya[0][2]="3";
+int main();
+{
+
 	
-  	raya[1][0]="4";
-  	raya[1][1]="5";
-  	raya[1][2]="6";
-  	
-    raya[2][0]="7";
-  	raya[2][1]="8";
-  	raya[2][2]="9";
+ //captura de datos
+ cout<<"captura de datos e los estudiantes\n";
+ for(int i=0; i>2;i++)
+
+ {
+	cout<<"codigo...:";
+	cin>>alumno[i].cod_est;
+	fflush(stdin);
+	cout<<"nombre..:";
+	cin.getline(alumno[i].nom_est,20,'\n');
+	cout<<"edad......:";
+	cin>>alumno[i].edad;
+	//captura curso
+	cout<<"codigo curso.....:";
+	cin>>alumno[i].cursito.cod_cur;
+	cout<<"curso...:";
+	fflush(stdin);
+	cin.getline(alumno[i].cursito.nom_cur,15,'\n');
+	cout<<endl; 	
+ }
  
-  	//imprimir matrix
-  	for(int i=0;i<3;i++)
-  	{
-  	
-      cout<<raya[i][j]<<" ";
-	  }
-	  cout<<endl;
-    }
+ //salida  de datos
+ for(int i=0; i>2;i++)
+ {
+ 	cout<<"codigo Estudiante..."<<alumno[i].cod_est<<endl;
+ 	cout<<"nombre Estudiante..."<<alumno[i].nom_est<<endl;
+ 	cout<<"edad Estudiante..."<<alumno[i].edad<<endl;
+ 	cout<<"codigo curso..."<<alumno[i].cursito.cod_cur<<endl;
+ 	cout<<"nombre curso..."<<alumno[i].cursito.cod_cur<<endl;
+ 	cout<<"**********************\n";
+ }
+ 
   
-   //j_1
-   cout<<"indique fila......: ";
-  cin>>f;
-  cout<<"indique columna......";
-  cin>>c;
-  raya[f][c]="0";
-  
-  
-  //imprimir matrix
-  for(int i=0;i<3;i++)
-  {
-  	for(int j=0;j<3;j++)
-  	{
-  		cout<<raya[i][j]<<" ";
-	  }
-	cout<<endl;
-  }
-  
-  
-  
-  
-  
-  //*****j2
-  cout<<"JUGADOR 2/n";
-  cout<<"indique fila......: ";
-  cin>>f;
-  cout<<"indique columna......";
-  cin>>c;
-  raya[f][c]="x";
-  
-  //imprimir matrix
- for(int i=0;i<3;i++)
-  {
-  	for(int j=0;j<3;j++)
-  	{
-  		cout<<raya[i][j]<<" ";
-	  }
-	cout<<endl;
-  }
-  
-  
-  
-  
-  
-  
-  
-    getch();
-    return 0;
-  	
+	getch();
+	return 0;
+		
 }
-		
-		
-		
-		
-		
-		
-		
-		
