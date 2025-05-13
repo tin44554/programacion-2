@@ -1,22 +1,36 @@
-#include <iostream>
-#include <conio.h>
-using namespace  std;
+#include<iostream>
+#include<conio.h>
+
+
+using namespace std;
+//creacion de struct
+struct Estudiante
+{	
+  int cod;	
+  char nombre[10];
+} estu_1;
+
+
+
+
+
 int main()
 {
-   //crear una matriz
-   int d1[3][3]	;
-   
-   //asignar valores directamente 
-   d1[0][0]=5;
-   d1[2][2]=-15;
-   
-   //mostrar los datos
-   cout<<d1[0][0]<<endl;
-   cout<<d1[2][2]<<endl;
-   
- 
- 
-    getch();
-    return 0;
-  	
+    //capturar datos
+	cout<<"ingrese el codigo.....:"	;
+	cin>>estu_1.cod;
+	cout<<"ingrese el nombre del estudinte...:";
+	cin>>estu_1.nombre;
+	
+	//salida de datos
+	cout<<"codigo...:"<<estu_1.cod<<endl;
+	cout<<"estudiante...:"<<estu_1.nombre<<endl;
+	
+	
+	
+	
+		
+	getch();
+	return 0;
+	
 }

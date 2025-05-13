@@ -10,7 +10,9 @@ struct Estudiante
   int cod;	
   char nombre[10];
   int edad;
-} estu_1,estu_2;
+} estu_1;
+
+
 
 
 
@@ -22,28 +24,15 @@ int main()
 	fflush(stdin);
 	cout<<"ingrese el nombre del estudinte...:";
 	cin.getline (estu_1.nombre,10,'\n');
+	
 	cout<<"edad del estudiante...:";
 	cin>>estu_1.edad;
 	
-	
-	//capurta datos estudiante dos
-	cout<<"codigo....:";
-	cin>>estu_2.cod;
-	fflush(stdin);
-	cout<<"nombre estuinte....:";
-	cin.getline(estu_2.nombre,10,'\n');
-	cout<<"edad....:";
-	cin>>estu_2.edad;
-	
-		
 	//salida de datos
 	cout<<"codigo...:"<<estu_1.cod<<endl;
 	cout<<"estudiante...:"<<estu_1.nombre<<endl;
-	cout<<"edad...:"<<estu_1.edad<<endl;
-	cout<<endl;
-	cout<<"codigo...:"<<estu_2.cod<<endl;
-	cout<<"estudiante...:"<<estu_2.nombre<<endl;
-	cout<<"edad...:"<<estu_2.edad<<endl;
+		cout<<"edad...:"<<estu_1.edad<<endl;
+	
 	
 	
 		

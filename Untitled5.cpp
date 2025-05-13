@@ -16,15 +16,15 @@ struct estudiante
 	char nom_est[20];
 	int edad;
 	struct curso cursito;		
-}alumno[2];
+} alumno[2];
 	
-int main();
+int main()
 {
 
 	
  //captura de datos
  cout<<"captura de datos e los estudiantes\n";
- for(int i=0; i>2;i++)
+ for(int i=0; i<2; i++)
 
  {
 	cout<<"codigo...:";
@@ -44,7 +44,7 @@ int main();
  }
  
  //salida  de datos
- for(int i=0; i>2;i++)
+ for(int i=0; i<2;i++)
  {
  	cout<<"codigo Estudiante..."<<alumno[i].cod_est<<endl;
  	cout<<"nombre Estudiante..."<<alumno[i].nom_est<<endl;

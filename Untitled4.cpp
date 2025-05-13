@@ -1,39 +1,44 @@
-#include <iostream>
-#include <conio.h>
-using namespace  std;
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+//creacion de struct
+struct Estudiante
+{	
+  int cod;	
+  char nombre[10];
+  int edad;
+} estu[3];
+
 int main()
-	{
-	//crear matriz 8,4
-	int v=4,d=8;//v -> vendedoes d->dias 
-	int ventas[v][d];
-	//llamar la matriz de ceros 
-	for(int i=0;i<v;i++)
-		{
-		for(int j=0;j<d;j++)
-		{
-		ventas [i][j]=0;
-			
-     }
-
-   }
-    //llamar la matrix
- for(int i=0;i<v;i++)	
 {
-
-   for (int j=0;j<d;j++)	
+    //capturar datos
+    for(int i=0;i<3;i++)
+    {
+    cout<<"ingrese el codigo.....:"	;
+	cin>>estu[i].cod;
+	fflush(stdin);
+	
+	cout<<"ingrese el nombre del estudinte...:";
+	cin.getline (estu[i].nombre,10,'\n');
+	
+	cout<<"edad del estudiante...:";
+	cin>>estu[i].edad;	
+	}
+    
+    
+	//salida de datos
+	for(int i=0;i<3;i++)
 	{
-	cout<<ventas[i][j]<<" ";
+	cout<<"codigo...:"<<estu[i].cod<<endl;
+	cout<<"estudiante...:"<<estu[i].nombre<<endl;
+	cout<<"edad...:"<<estu[i].edad<<endl;			
+	}
 	
-    }
-
-    cout<<endl;
-}
-
-
-
-
 	
-    getch();
-    return 0;
-  	
+		
+		
+	getch();
+	return 0;
+	
 }
